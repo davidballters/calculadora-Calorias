@@ -3,7 +3,7 @@ form.addEventListener("submit", handleSubmit);
 
 function handleSubmit(event){
   event.preventDefault();
-
+  
   const name = document.getElementById("name").value;
   const idNumber = document.getElementById("id-number").value;
   const idDocument = getSelectedValue('type-document');
@@ -26,30 +26,30 @@ function handleSubmit(event){
 
   const layout = `
   <h2>Aqui está su resultado:</h2>
-  <div class="result-content">
-    <ul style= "list-style:none;">
-      <li>
-        Usuario ${name}
+  <div class="result-content bg-secondary">
+    <ul class="mx-auto p-2"  style="list-style:none;" >
+      <li class="mb-2">
+        Usuario <strong> ${name}</strong>
       </li>
-      <li>
+      <li class="mb-2">
         con numero de documento <strong>${idNumber}</strong>
       </li>
-      <li>
+      <li class="mb-2">
         con tipo de documento <strong>${idDocument}</strong>
       </li>
-      <li>
-        Su edad <strong>${age} años ${ageCategory}</strong>.
+      <li class="mb-2">
+        Su edad <strong>${age} años (${ageCategory})</strong>.
       </li>
-      <li>
+      <li class="mb-2"> 
         Su metabolismo basal es de <strong>${tmb} calorías</strong>.
       </li>
-      <li>
+      <li class="mb-2">
         Para mantener su peso usted necesita consumir esta cantidad de <strong>${maintenance} calorías</strong>.
-      </li>
-      <li>
+      </li class="mb-2">
+      <li class="mb-2">
         Para perder peso necesita consumir esta cantidad de  <strong>${loseWeight} calorías</strong>.
       </li>
-      <li>
+      <liclass="mb-2">
         Para ganar peso necesita consumir esta cantidad de  <strong>${gainWeight} calorías</strong>.
       </li>
     </ul>
@@ -66,63 +66,11 @@ function getSelectedValue(id) {
 }
 
 function dateAge(numberAge){
-  if(numberAge >= 15 && numberAge <=19){
+  if(numberAge >= 5 && numberAge <=19){
     return "Paciente joven";
   } else if(numberAge >= 30 && numberAge <= 59){
     return "Paciente adulto";
   } else if(numberAge >= 60){
     return "Adulto mayor";
   }
-}
-
-
-/////
-
-function mostrarMensajeDeError(msg) {
-  const calculo = document.querySelector('#calculo');
-  if (calculo) {
-    calculo.remove();
-  }
-
-  const divError = document.createElement('div');
-  divError.className = 'd-flex justify-content-center align-items-center h-100';
-  divError.innerHTML = `<span class="alert alert-danger text-center">${msg}</span>`;
-
-  resultado.appendChild(divError);
-
-  setTimeout(() => {
-    divError.remove();
-    desvanecerResultado();
-  }, 5000);
-}
-
-
-// Animaciones
-function aparecerResultado() {
-  resultado.style.top = '100vh';
-  resultado.style.display = 'block';
-  
-  let distancia = 100;
-  let resta = 0.3;
-  let id = setInterval(() => {
-    resta *= 1.1;
-    resultado.style.top = `${distancia - resta}vh`;
-    if (resta > 100) {
-      clearInterval(id);
-    }
-  }, 10)
-}
-
-function desvanecerResultado() {
-  let distancia = 1;
-
-  let id = setInterval(() => {
-    distancia *= 2;
-    resultado.style.top = `${distancia}vh`;
-    if (distancia > 100) {
-      clearInterval(id);
-      resultado.style.display = 'none';
-      resultado.style.top = 0;
-    }
-  }, 10)
 }
