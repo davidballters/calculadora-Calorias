@@ -1,0 +1,136 @@
+<!DoCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
+    <title>Calculadora de calorías</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="bg-dark py-2">
+          <div class="container">
+              <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+                  <div class="container-fluid">
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                      <ul class="navbar-nav">
+                          <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Nutrición</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Planes</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="#">Contacto</a>
+                          </li>
+                      </ul>
+                    </div>
+                  </div>
+              </nav>
+          </div>
+      </div>
+    </header>
+    
+    <main class="main-content">
+      <header>
+        <h1>Calculador de calorias</h1>
+      </header>
+      <div class="container">
+        <div class="content card">
+          <form id="form">
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" required/>
+            </div>
+            <div class="form-group">
+              <label for="numero-docuemnto">#Documento</label>
+              <input type="number" id="id-number" required/>
+            </div>
+            <div class="form-group">
+              <label for="type-document">Tipo de Documento</label>
+              <select id="type-document" required>
+                <option value="Cedula">Documento Nacional</option>
+                <option value="Tarjeta de Identidad">Tarjeta de identidad</option>
+                <option value="Registro Civil">Registro civil</option>
+                <option value="Pasaporte">Pasaporte</option>
+                <option value="Visa Americana">Visa Americana</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="age">Ingrese la edad</label>
+              <input type="number" id="age" required/>
+            </div>
+            <div class="form-group">
+              <label for="weight">Peso</label>
+              <input type="number" id="weight" required />
+            </div>
+            <div class="form-group">
+              <label for="height">Ingrese la altura</label>
+              <input type="number" id="height" required/>
+            </div>
+            <div class="form-group">
+              <label for="activity_level">Nivel de actividad fisica</label>
+              <select id="activity_level">
+                <option value="1.2">Poco o ningún ejercicio</option>
+                <option value="1.375">Ejercicio moderado (3-5 días a la semana)</option>
+                <option value="1.55">Ejercicio fuerte (6-7 días a la semana)</option>
+                <option value="1.725">Ejercicio muy fuerte (una vez al día, entrenamiento muy duro)</option>
+                <option value="1.9">Ejercicio muy intenso (dos veces al día, entrenamientos muy duros)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="gender">Sexo</label>
+              <select id="gender">
+                <option value="male">Masculino</option>
+                <option value="female">Femenino</option>
+              </select>
+            </div>
+    
+            <div class="form-group">
+              <button type="submit">Calcular!</button>
+            </div>
+          </form>
+          <div class="result-content" id="result"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer row p-3">
+      <div class="col d-flex justify-content-right align-items-center">
+        <ul>
+          <li>✖️ <a href="#">Instagram</a></li>
+          <li>✖️ <a href="#">Facebook</a></li>
+          <li>✖️ <a href="#">Telegram</a></li>
+        </ul>
+      </div>
+      
+      <div class="col d-flex justify-content-right align-items-center">
+        <ul>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Guías</a></li>
+          <li><a href="#">Acesorías</a></li>
+        </ul>
+      </div>
+
+      <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+        <p class="m-0">
+          <span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Vero optio voluptate qui adipisci, hic voluptatibus totam 
+            dolorem cumque repellendus amet! Repudiandae, ab error unde
+            porro sint fugit qui temporibus, consequatur dolores sit quas
+            perspiciatis omnis magnam iure ut, quod dignissimos molestias 
+            voluptas architecto nam! Accusantium corporis sit eos dolorum 
+            accusamus.
+          </span>
+        </p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
